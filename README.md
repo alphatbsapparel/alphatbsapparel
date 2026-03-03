@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 export default function ClothingBrandSite() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 text-white">
-      {/* Navbar */}
       <nav className="flex justify-between items-center p-6">
         <h1 className="text-3xl font-extrabold">The Brightest Star Alpha</h1>
         <div className="space-x-6">
@@ -16,14 +15,8 @@ export default function ClothingBrandSite() {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section id="home" className="flex flex-col items-center text-center py-24 px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-6xl font-black mb-6"
-        >
+        <motion.h2 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-6xl font-black mb-6">
           Wear Your Attitude
         </motion.h2>
         <p className="max-w-xl text-lg mb-8">
@@ -34,7 +27,6 @@ export default function ClothingBrandSite() {
         </Button>
       </section>
 
-      {/* About */}
       <section id="about" className="py-20 px-6 bg-black/30">
         <h3 className="text-4xl font-bold mb-6">About Us</h3>
         <p className="max-w-3xl">
@@ -42,7 +34,6 @@ export default function ClothingBrandSite() {
         </p>
       </section>
 
-      {/* Shop */}
       <section id="shop" className="py-20 px-6">
         <h3 className="text-4xl font-bold mb-10">Featured Products</h3>
         <div className="grid md:grid-cols-3 gap-6">
@@ -59,7 +50,6 @@ export default function ClothingBrandSite() {
         </div>
       </section>
 
-      {/* Contact */}
       <section id="contact" className="py-20 px-6 bg-black/40">
         <h3 className="text-4xl font-bold mb-6">Contact Us</h3>
         <form className="max-w-lg space-y-4">
@@ -70,16 +60,16 @@ export default function ClothingBrandSite() {
         </form>
       </section>
 
-      {/* Footer */}
       <footer className="text-center py-6 bg-black/70">
         © 2026 The Brightest Star Alpha. All rights reserved.
       </footer>
     </div>
   );
-}
-export function Card({ children, className }) {
+}export function Card({ children, className }) {
   return <div className={`shadow-lg ${className}`}>{children}</div>;
-}export function CardContent({ children, className }) {
+}
+
+export function CardContent({ children, className }) {
   return <div className={`p-4 ${className}`}>{children}</div>;
 }export function Button({ children, className, onClick }) {
   return (
@@ -105,9 +95,7 @@ export function Card({ children, className }) {
 }/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./app/**/*.{js,jsx}", "./components/**/*.{js,jsx}"],
-  theme: {
-    extend: {},
-  },
+  theme: { extend: {} },
   plugins: [],
 }module.exports = {
   plugins: {
