@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -30,4 +29,96 @@ export default function ClothingBrandSite() {
         <p className="max-w-xl text-lg mb-8">
           Premium streetwear designed to stand out. Loud colors. Bold identity.
         </p>
-        <Button className="bg-black text-white hover:bg-white hover:text-black rounded-2xl px-8 py
+        <Button className="bg-black text-white hover:bg-white hover:text-black rounded-2xl px-8 py-6 text-lg">
+          Shop Now
+        </Button>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-20 px-6 bg-black/30">
+        <h3 className="text-4xl font-bold mb-6">About Us</h3>
+        <p className="max-w-3xl">
+          The Brightest Star Alpha is a fashion-forward apparel brand blending street culture with fearless design. We believe clothing is a statement — not just an outfit.
+        </p>
+      </section>
+
+      {/* Shop */}
+      <section id="shop" className="py-20 px-6">
+        <h3 className="text-4xl font-bold mb-10">Featured Products</h3>
+        <div className="grid md:grid-cols-3 gap-6">
+          {["Neon Hoodie", "Graphic Tee", "Urban Jacket"].map((item) => (
+            <Card key={item} className="bg-white text-black rounded-2xl">
+              <CardContent className="p-6">
+                <div className="h-40 bg-gray-200 rounded-xl mb-4" />
+                <h4 className="text-xl font-bold">{item}</h4>
+                <p className="mb-4">$79</p>
+                <Button className="w-full rounded-xl">Add to Cart</Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-20 px-6 bg-black/40">
+        <h3 className="text-4xl font-bold mb-6">Contact Us</h3>
+        <form className="max-w-lg space-y-4">
+          <input placeholder="Name" className="w-full p-3 rounded-xl text-black" />
+          <input placeholder="Email" className="w-full p-3 rounded-xl text-black" />
+          <textarea placeholder="Message" className="w-full p-3 rounded-xl text-black" />
+          <Button className="rounded-xl px-6 py-4">Send Message</Button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 bg-black/70">
+        © 2026 The Brightest Star Alpha. All rights reserved.
+      </footer>
+    </div>
+  );
+}
+export function Card({ children, className }) {
+  return <div className={`shadow-lg ${className}`}>{children}</div>;
+}export function CardContent({ children, className }) {
+  return <div className={`p-4 ${className}`}>{children}</div>;
+}export function Button({ children, className, onClick }) {
+  return (
+    <button className={`font-bold ${className}`} onClick={onClick}>
+      {children}
+    </button>
+  );
+}{
+  "name": "alphatbsapparel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "framer-motion": "^10.12.16",
+    "next": "13.5.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/**/*.{js,jsx}", "./components/**/*.{js,jsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+}
+
+module.exports = nextConfig# The Brightest Star Alpha
+
+Official website for The Brightest Star Alpha apparel brand.
